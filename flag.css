@@ -1,0 +1,46 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: black;
+}
+.contain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    animation: borderRotation 4s ease-in-out alternate infinite;
+}
+.flag{
+    height: 300px;
+    width: 400px;
+    background-color: blue;
+    position: relative;
+    animation: flagmove 5s ease-in-out alternate-reverse infinite;
+}
+@keyframes borderRotation {
+    from{
+        transform: rotate(360deg);
+        border: 10px solid green;
+    }
+    to{
+        transform: rotate(360deg);
+        border: 10px solid blue;
+    }
+}
+@keyframes flagmove {
+    0%{
+        transform: scale(.8) skew(2.2deg, 2.1deg);
+    }
+    50%{
+        transform: scale(.9) skew(-2.2deg, -2.1deg);
+    }
+    100%{
+        transform: scale(.9) skew(2.2deg, 2.1deg);
+    }
+}
